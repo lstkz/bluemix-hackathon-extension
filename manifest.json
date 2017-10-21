@@ -1,0 +1,25 @@
+{
+  "name": "Git-Sadness",
+  "version": "1.0.0",
+  "description": "Git-Sadness",
+  "permissions": [
+    "tabs",
+    "http://*/",
+    "https://*/",
+    "webNavigation",
+    "webRequest"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "lib/mark.min.js",
+        "content_script.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "manifest_version": 2
+}
